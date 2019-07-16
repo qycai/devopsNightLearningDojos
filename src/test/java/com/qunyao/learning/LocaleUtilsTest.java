@@ -126,7 +126,6 @@ public class LocaleUtilsTest {
         assertEquals("CD", output.getVariant());
     }
 
-
     @Test
     public void tets_toLocale_withInputCountryIsAllLowercaseAndLengthIsTwo_shouldReturnCorrectLocale() {
         LocaleUtils localeUtils = new LocaleUtils();
@@ -138,7 +137,6 @@ public class LocaleUtilsTest {
         assertEquals("", output.getCountry());
         assertEquals("", output.getVariant());
     }
-
 
     @Test
     public void tets_toLocale_withInputCountryIsAllLowercaseAndLengthIsThree_shouldReturnCorrectLocale() {
@@ -164,7 +162,6 @@ public class LocaleUtilsTest {
         assertEquals("", output.getVariant());
     }
 
-
     @Test
     public void test_toLocale_withInputAreISO639LanguageCodeAndCountryIsEmpty_shouldReturnCorrectLocale() {
         LocaleUtils localeUtils = new LocaleUtils();
@@ -173,7 +170,6 @@ public class LocaleUtilsTest {
         thrown.expectMessage("Invalid locale format: " + input);
         localeUtils.toLocale(input);
     }
-
 
     @Test
     public void test_toLocale_withInputAreISO639LanguageCodeAndCountryIsNumeric_shouldReturnCorrectLocale() {
@@ -187,7 +183,6 @@ public class LocaleUtilsTest {
         assertEquals("", output.getVariant());
     }
 
-
     @Test
     public void test_toLocale_withInputAreISO639LanguageCodeAndCountryIsNotAllNumeric_shouldThrowException() {
         LocaleUtils localeUtils = new LocaleUtils();
@@ -196,7 +191,6 @@ public class LocaleUtilsTest {
         thrown.expectMessage("Invalid locale format: " + input);
         localeUtils.toLocale(input);
     }
-
 
     @Test
     public void test_toLocale_withInputAreISO639LanguageCodeAndISO3166CountryCodeAndVariantLengthOverZero_shouldReturnCorrectLocale() {
@@ -222,8 +216,6 @@ public class LocaleUtilsTest {
         assertEquals("def", output.getVariant());
     }
 
-
-
     @Test
     public void test_toLocale_withInputAreISO639LanguageCodeAndCountryLengthEqualsZeroAndVariantLengthOverZero_shouldReturnCorrectLocale() {
         LocaleUtils localeUtils = new LocaleUtils();
@@ -235,7 +227,6 @@ public class LocaleUtilsTest {
         assertEquals("", output.getCountry());
         assertEquals("cd", output.getVariant());
     }
-
 
     @Test
     public void test_toLocale_withInputMoreThanLanguageCountryVariant_shouldThrowException() {
