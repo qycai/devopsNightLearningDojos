@@ -1,1 +1,2 @@
 # devopsNightLearningDojos
+1.如果需要获取jacoco测试报告，需要run一下build.gradle里面的jacocoTestReport
